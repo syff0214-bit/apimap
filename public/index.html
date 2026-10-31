@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="장소를 검색하고 두 지점 사이의 직선거리를 확인하세요.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>사이 · 두 장소의 거리</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header><a class="brand" href="/">사이<span>↗</span></a><span class="tag">DISTANCE BETWEEN PLACES</span></header>
+  <main>
+    <section class="intro"><span class="eyebrow">장소와 장소, 그 사이</span><h1>얼마나<br>떨어져 있을까요<span>?</span></h1><p>떠오르는 두 장소를 검색해 보세요.<br>두 지점 사이의 거리를 바로 알려드려요.</p><div class="illustration" aria-hidden="true"><span class="pin a">A</span><span class="dash"></span><span class="pin b">B</span><span class="orbit"></span></div><small>OPENSTREETMAP으로 찾는 세상의 모든 장소</small></section>
+    <section class="card" aria-label="거리 측정">
+      <div class="card-heading"><h2>거리 측정</h2><span>직선거리</span></div>
+      <div id="fields"></div>
+      <button id="swap" class="swap" type="button">⇅ 출발 · 도착 바꾸기</button>
+      <button id="calculate" class="primary" type="button" disabled>거리 계산하기 <span>↗</span></button>
+      <p id="hint" class="hint" role="status">검색 결과에서 출발지와 도착지를 선택해 주세요.</p>
+      <section id="result" class="result" aria-live="polite" hidden><span class="eyebrow">두 장소 사이의 총거리</span><div><strong id="distance"></strong><span id="unit"></span></div><p>지구의 곡률을 반영한 직선거리입니다.<br>실제 도로 이동거리와는 다를 수 있어요.</p><a id="map-link" target="_blank" rel="noopener noreferrer">지도에서 보기 <span>↗</span></a></section>
+    </section>
+  </main>
+  <footer><span>가까운 곳부터, 멀리 있는 곳까지.</span><span>장소 데이터 © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a> · <a href="https://nominatim.org/" target="_blank" rel="noopener noreferrer">Nominatim</a></span></footer>
+</body>
+</html>
